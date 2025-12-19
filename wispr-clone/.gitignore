@@ -1,0 +1,14 @@
+# 1. Dependency (Ye user khud install karega 'npm install' se)
+node_modules
+
+# 2. Build Files (Ye user khud generate karega)
+dist
+
+# 3. Security (Ye SABSE important hai - Aapki keys safe rahengi)
+.env
+.env.local
+
+# 4. Logs & System Junk (Taaki doosron ko errors na dikhein)
+npm-debug.log*
+yarn-debug.log*
+.DS_Store

@@ -1,0 +1,41 @@
+:root {
+  --bg-color: #0f172a;
+  --surface: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #22d3ee;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  /* Added a subtle gradient for a more "pro" look */
+  background-image: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Prevents whole page scroll */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  max-width: 800px; /* Limits width on big screens */
+  margin: 0 auto;   /* Centers the app */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Mobile: Less padding on phones */
+@media (max-width: 600px) {
+  .main-container {
+    padding: 15px;
+  }
+}

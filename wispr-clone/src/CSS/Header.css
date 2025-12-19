@@ -1,0 +1,53 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.5px;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  border-radius: 20px; /* More rounded pill shape */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.status-recording { 
+  color: #fff;
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+  animation: pulse 2s infinite; 
+}
+
+.status-idle { 
+  color: var(--text-muted); 
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@keyframes pulse {
+  0% { opacity: 1; box-shadow: 0 0 0 rgba(239, 68, 68, 0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 15px rgba(239, 68, 68, 0); }
+  100% { opacity: 1; box-shadow: 0 0 0 rgba(239, 68, 68, 0.4); }
+}
+
+/* Mobile Tweaks */
+@media (max-width: 600px) {
+  .header-title { font-size: 1.25rem; }
+  .status-badge { padding: 4px 8px; font-size: 0.7rem; }
+}
